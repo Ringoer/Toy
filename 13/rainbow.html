@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #rainbow {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    #rainbow div {
+      overflow: hidden;
+      border-radius: 50%;
+      margin: 10px;
+    }
+  </style>
+  <title>Rainbow</title>
+</head>
+
+<body>
+  <div id="rainbow">
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let current = document.getElementById("rainbow");
+    let color_step = 51, color_base = 0;
+    let width = 400;
+    for (let i = 0; i < 8; i++, width -= 20, color_base += color_step) {
+      current = current.children[0];
+      let style = "width:" + width.toString() + "px;height:" + width.toString() + "px;background:hsl(" + color_base.toString() + ",80%,50%);";
+      if (i == 7) {
+        style = style.replace("50%", "100%");
+      }
+      current.style = style;
+    }
+  </script>
+</body>
+
+</html>

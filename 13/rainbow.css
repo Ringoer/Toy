@@ -1,0 +1,11 @@
+.rainbow{
+  height: 200px;
+  overflow: hidden;
+}
+.rainbow:nth-child(1){
+  background-color: hsl(0, 90%, 50%);
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+}
