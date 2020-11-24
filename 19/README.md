@@ -1,4 +1,10 @@
-通过命令
+先安装 express
+
+```bash
+npm install express --save
+```
+
+然后通过命令
 
 ```bash
 node server.js
