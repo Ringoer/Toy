@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>会动的八卦图</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+    }
+
+    .main {
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "app right"
+        "app right";
+    }
+
+    #app {
+      grid-area: app;
+      overflow: auto;
+      word-break: break-all;
+    }
+
+    .right {
+      grid-area: right;
+      display: flex;
+      justify-content: center;
+    }
+
+    #circle::before,
+    #circle::after {
+      content: '';
+      display: block;
+      width: 200px;
+      max-width: 20vh;
+      height: 200px;
+      max-height: 20vh;
+    }
+
+    @media (max-width: 600px) {
+      .main {
+        grid-template-areas: "app app"
+          "right right";
+      }
+
+      .right {
+        align-items: center;
+      }
+    }
+  </style>
+  <style id="style"></style>
+</head>
+
+<body>
+  <div class="main">
+    <div id="app"></div>
+    <div class="right">
+      <div id="circle"></div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
