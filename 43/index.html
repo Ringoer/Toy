@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>导航</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <div class="searchBox">
+        <input type="text" id="keyword">
+        <button onclick="search()" id="submit">搜索</button>
+      </div>
+    </header>
+    <main>
+      <div id="tab">
+        <div class="delete" onclick="cancel()">×</div>
+        <div>
+          <span>链接：</span>
+          <input type="text" id="url" placeholder="请输入链接">
+        </div>
+        <div>
+          <span>描述：</span>
+          <input type="text" id="desp" placeholder="请输入描述">
+        </div>
+        <button onclick="insertCard()">确定</button>
+      </div>
+      <div class="container"></div>
+    </main>
+    <footer>
+      <div>© 2017 — 2020 ringoer.com 版权所有</div>
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

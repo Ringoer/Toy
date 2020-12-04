@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f0f0f0
+}
+
+.app{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden auto;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: 
+  ". header ."
+  ". main ."
+  ". footer .";
+}
+
+.app>*{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  grid-area: header;
+}
+
+.searchBox{
+  width: 80%;
+  max-width: 800px;
+}
+
+#keyword{
+  width: calc(100% - 100px);
+  padding: 8px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#submit{
+  width: 80px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+  background-color: cornflowerblue;
+}
+
+main{
+  grid-area: main;
+}
+
+footer{
+  grid-area: footer;
+}
+
+.container{
+  width: 100%;
+  min-width: 500px;
+  max-width: 1200px;
+  height: 100%;
+  /* box-shadow: 0 0 3px black; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#tab{
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  box-shadow: 0 0 1px black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+
+#tab>*{
+  display: block;
+  margin: 20px 0;
+}
+
+#tab>.delete{
+  visibility: visible;
+  margin: 0;
+}
+
+.card{
+  width: 200px;
+  height: 160px;
+  margin: 20px;
+  box-shadow: 0 0 1px black;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+.delete{
+  position: absolute;
+  font-size: 30px;
+  top: 2px;
+  right: 10px;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.card:hover .delete{
+  visibility: visible;
+}
+
+.logo{
+  font-size: 80px;
+}
+
+#url,#desp{
+  padding: 10px;
+}
+
+#tab>button{
+  border: 1px solid #0381aa;
+  color: #fff;
+  background-color: #00a7de;
+  padding: 10px;
+  width: 100px;
+}
