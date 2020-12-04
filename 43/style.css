@@ -66,7 +66,7 @@ footer{
 
 .container{
   width: 100%;
-  min-width: 500px;
+  min-width: 300px;
   max-width: 1200px;
   height: 100%;
   /* box-shadow: 0 0 3px black; */
@@ -138,6 +138,10 @@ footer{
   font-size: 80px;
 }
 
+.desp{
+  white-space: nowrap;
+}
+
 #url,#desp{
   padding: 10px;
 }
@@ -148,4 +152,21 @@ footer{
   background-color: #00a7de;
   padding: 10px;
   width: 100px;
+}
+
+@media (max-width: 600px){
+  .app{
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  }
+  .card{
+    width: 35vw;
+    height: 28vw;
+    margin: 3vw;
+  }
+  .logo{
+    font-size: 60px;
+  }
 }
