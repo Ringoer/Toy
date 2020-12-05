@@ -10,7 +10,7 @@ function ajaxGet(url, callback) {
 }
 
 function ajaxProxy(url, type, target) {
-  ajaxGet('/public/' + url, data => {
+  ajaxGet('public/' + url, data => {
     let div = document.createElement(type)
     div.innerHTML = data
     target.appendChild(div)
@@ -32,7 +32,7 @@ let changePage = (() => {
       alert('没有更多数据了')
       return
     }
-    ajaxGet('/db/page' + target.toString() + '.json', data => {
+    ajaxGet('db/page' + target.toString() + '.json', data => {
       data = JSON.parse(data)
       let newString = '<ul>' + data.map(item => '<li>id=' + item.id + '</li>').join('').toString() + '</ul>'
       pageTarget.innerHTML = newString
