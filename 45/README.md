@@ -16,4 +16,4 @@ node server.js
 
 本项目部署地址：
 
-https://ringoer.com/Toy/19/index.html
+https://ringoer.com/Toy/45/index.html
