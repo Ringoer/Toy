@@ -1,12 +1,45 @@
 window.dom = {
+  create(tagOrHTML) {
+    let node
+    if (tagOrHTML[0] === '<') {
+      node = document.createElement('template')
+      node.content.textContent = tagOrHTML
+      return node.content.firstChild
+    } else {
+      return document.createElement(tagOrHTML)
+    }
+  },
+  remove(target) {
+    target.parentNode.remove(target)
+    return target
+  },
   find(selector) {
     return document.querySelectorAll(selector)
+  },
+  attr(target, key, value) {
+    target[key] = value
   },
   style(target, key, value) {
     target.style[key] = value
   },
   each(target, fn) {
     for (let it of target) fn(it)
+  },
+  append(target, nodeOrString) {
+    let node = nodeOrString
+    if (typeof nodeOrString === 'string') {
+      node = document.createTextNode(nodeOrString)
+    }
+    target.appendChild(node)
+  },
+  addEvent(target, event, fn) {
+    target.addEventListener(event, fn)
+  },
+  children(target) {
+    return target.children
+  },
+  siblings(target) {
+    return Array.from(target.parentNode.children).reduce((sum, it) => it === a ? sum : sum.concat([it]), [])
   }
 }
 
