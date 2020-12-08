@@ -3,7 +3,7 @@ window.dom = {
     let node
     if (tagOrHTML[0] === '<') {
       node = document.createElement('template')
-      node.content.textContent = tagOrHTML
+      node.innerHTML = tagOrHTML
       return node.content.firstChild
     } else {
       return document.createElement(tagOrHTML)
