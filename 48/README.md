@@ -14,6 +14,6 @@ node server.js
 
 ---
 
-本项目部署地址：
+本项目无部署地址
 
-https://ringoer.com/Toy/19/index.html
+若要试用，请clone
