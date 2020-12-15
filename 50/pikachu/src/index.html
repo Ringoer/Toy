@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>皮卡丘</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+    .controller>#code {
+      min-height: 50vh;
+      max-height: 50vh;
+      min-width: 100vw;
+      overflow-y: auto;
+    }
+
+    .controller>#code::-webkit-scrollbar {
+      display: none;
+    }
+
+    .controller>.sideBar {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+    }
+
+    .controller>.sideBar>button {
+      display: block;
+      padding: 10px 15px;
+      margin: 10px;
+      cursor: pointer;
+      background-color: deepskyblue;
+      border: none;
+      color: white;
+      box-shadow: 0 0 3px black;
+    }
+
+    .controller>.sideBar>button:hover {
+      background-color: rgb(128, 222, 253);
+    }
+
+    .result {
+      min-height: 50vh;
+      transition: all 0.3s;
+    }
+  </style>
+  <style id="style"></style>
+</head>
+
+<body>
+  <header class="controller">
+    <div id="code"></div>
+    <div class="sideBar">
+      <button id="slow">慢速</button>
+      <button id="normal">中速</button>
+      <button id="fast">快速</button>
+    </div>
+  </header>
+  <main class="result">
+    <div class="pikachu">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="lip left"></div>
+      <div class="lip right"></div>
+      <div class="mouth">
+        <div class="tongue"></div>
+      </div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>

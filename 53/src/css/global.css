@@ -1,0 +1,10 @@
+body{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+body>div{
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid gray;
+}

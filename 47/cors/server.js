@@ -6,6 +6,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 app.get('/friends.json', (req, res) => {
+  console.log(req.headers)
   res.setHeader('Access-Control-Allow-Origin', 'http://frank.com:9999')
   res.sendFile(__dirname + '/friends.json');
 });

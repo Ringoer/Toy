@@ -1,0 +1,16 @@
+#app2>ol{
+  display: flex;
+}
+#app2>ol>li{
+  width: 50%;
+  text-align: center;
+}
+#app2>.menu>li.active{
+  background-color: rgb(203,200,61);
+}
+#app2>.content>li{
+  display: none;
+}
+#app2>.content>li.active{
+  display: block;
+}
